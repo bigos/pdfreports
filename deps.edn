@@ -1,21 +1,23 @@
 {:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.10.2"}}
+ :deps  {org.clojure/clojure  {:mvn/version "1.10.2"}
+         org.clojure/data.xml {:mvn/version "0.0.8"}
+         }
  :aliases
- {:run-m {:main-opts ["-m" "sgs.pdfreports"]}
-  :run-x {:ns-default sgs.pdfreports
-          :exec-fn greet
-          :exec-args {:name "Clojure"}}
-  :test {:extra-paths ["test"]
-         :extra-deps {org.clojure/test.check {:mvn/version "1.1.0"}}}
+ {:run-m   {:main-opts ["-m" "sgs.pdfreports"]}
+  :run-x   {:ns-default sgs.pdfreports
+            :exec-fn    greet
+            :exec-args  {:name "Clojure"}}
+  :test    {:extra-paths ["test"]
+            :extra-deps  {org.clojure/test.check {:mvn/version "1.1.0"}}}
   :runner
   {:extra-deps {com.cognitect/test-runner
                 {:git/url "https://github.com/cognitect-labs/test-runner"
-                 :sha "b6b3193fcc42659d7e46ecd1884a228993441182"}}
-   :main-opts ["-m" "cognitect.test-runner"
+                 :sha     "b6b3193fcc42659d7e46ecd1884a228993441182"}}
+   :main-opts  ["-m" "cognitect.test-runner"
                "-d" "test"]}
   :uberjar {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.0.193"}}
-            :exec-fn hf.depstar/uberjar
-            :exec-args {:aot true
-                        :jar "pdfreports.jar"
-                        :main-class "sgs.pdfreports"
-                        :sync-pom true}}}}
+            :exec-fn      hf.depstar/uberjar
+            :exec-args    {:aot        true
+                           :jar        "pdfreports.jar"
+                           :main-class "sgs.pdfreports"
+                           :sync-pom   true}}}}
