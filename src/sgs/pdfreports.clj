@@ -19,7 +19,7 @@ sgs.pdfreports> (type (.content (tryme)))
 (defn tryme
   "Try parsing a string."
   []
-  (let [str (slurp "/home/jacek/Desktop/LidlReports/1345098")]
+  (let [str (slurp "/home/jacek/Desktop/Reports/1345098")]
     (parse-str str)))
 
 (defn -main
