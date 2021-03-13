@@ -1,0 +1,13 @@
+* Notes
+
+** Clojure libraries
+   https://www.clojure-toolbox.com/
+   https://clojure.org/community/libraries
+   https://github.com/razum2um/awesome-clojure
+   https://search.maven.org/
+
+*** like serapeum or alexandria
+    https://github.com/cloojure/tupelo
+
+** parsing xml
+   https://clojars.org/org.clojars.alitn/vtd-xml
