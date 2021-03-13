@@ -11,3 +11,7 @@
 
 ** parsing xml
    https://clojars.org/org.clojars.alitn/vtd-xml
+   https://clojure.github.io/data.xml/
+
+** messing
+   https://clojuredocs.org/clojure.core/subs
