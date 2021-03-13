@@ -1,12 +1,13 @@
 (ns sgs.pdfreports
-  (:require [clojure.data.xml :refer :all]))
+  (:gen-class)
+  (:require [clojure.data.xml :as xml]))
 
 (defn greet
   "Callable entry point to the application."
   [data]
   (println (str "Hello, " (or (:name data) "World") "!")))
 
-;;; you can return (type (parse-str str))
+;;; you can return (type (xml/parse-str str))
 ;;; menu REPL Inspect on returned type gives interesting information
 ;;; including methods
 ;;; (.count (tryme))
@@ -20,7 +21,7 @@ sgs.pdfreports> (type (.content (tryme)))
   "Try parsing a string."
   []
   (let [str (slurp "/home/jacek/Desktop/Reports/1345098")]
-    (parse-str str)))
+    (xml/parse-str str)))
 
 (defn -main
   "I don't do a whole lot ... yet."
