@@ -15,7 +15,7 @@
 ;; (.tag (tryme))
 ;; (.attrs (tryme))
 
-sgs.pdfreports> (type (.content (tryme)))
+;sgs.pdfreports> (type (.content (tryme)))
 
 (defn tryme
   "Try parsing a string."
