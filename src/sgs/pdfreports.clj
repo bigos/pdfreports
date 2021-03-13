@@ -1,5 +1,5 @@
 (ns sgs.pdfreports
-  (:gen-class))
+  (:require [clojure.data.xml :refer :all]))
 
 (defn greet
   "Callable entry point to the application."
