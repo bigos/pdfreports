@@ -1,6 +1,6 @@
 {:paths ["src" "resources"]
  :deps  {org.clojure/clojure  {:mvn/version "1.10.3"}
-         org.clojure/data.xml {:mvn/version "0.0.8"}
+         tupelo/tupelo {:mvn/version "21.01.26b"}
          }
  :aliases
  {:run-m   {:main-opts ["-m" "sgs.pdfreports"]}
