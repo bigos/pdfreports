@@ -38,12 +38,21 @@
 (defn pictures []
   (.get (.content (use-tags 8)) 0))
 
+(defn get-attrs [obj]
+  (.attrs obj))
+
+(defn cnt [obj n]
+  (.get (.content obj) n))
+
 ;;; one out of over 500
 (defn first-measurement []
   (.get(.content (.get (.content (use-tags 8)) 7)) 0))
 
 (defn first-measurement-better []
   (-> (tryme) (.content) (.get 8) (.content) (.get 7) (.content) (.get 0)))
+
+(defn first-measurement-best []
+  (-> (tryme) (cnt 8) (cnt 7) (cnt 0)))
 
 (defn groups []
   (.get (.content (use-tags 8)) 9))
