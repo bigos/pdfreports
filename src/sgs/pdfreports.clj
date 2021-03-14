@@ -23,6 +23,25 @@
   (let [str (slurp "/home/jacek/Desktop/Reports/1345098")]
     (xml/parse-str str)))
 
+;; (use-tags 6)
+(defn use-tags
+  "Get Nth tag of the xml file"
+  [n]
+  (.get (.content (tryme)) n))
+
+(defn pictures []
+  (.get (.content (use-tags 8)) 0))
+
+;;; one out of over 500
+(defn first-measurement []
+  (.get(.content (.get (.content (use-tags 8)) 7)) 0))
+
+(defn groups []
+  (.get (.content (use-tags 8)) 9))
+
+(defn countries []
+  (use-tags 9))
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
