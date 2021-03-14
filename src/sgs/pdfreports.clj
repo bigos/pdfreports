@@ -27,9 +27,7 @@
   "Try parsing a string."
   []
   (let [str (slurp "/home/jacek/Desktop/Reports/1345098")]
-    (xml/parse-str str))
-
-  )
+    (xml/parse-str str)))
 
 ;; (use-tags 6)
 (defn use-tags
@@ -43,6 +41,9 @@
 ;;; one out of over 500
 (defn first-measurement []
   (.get(.content (.get (.content (use-tags 8)) 7)) 0))
+
+(defn first-measurement-better []
+  (-> (tryme) (.content) (.get 8) (.content) (.get 7) (.content) (.get 0)))
 
 (defn groups []
   (.get (.content (use-tags 8)) 9))
