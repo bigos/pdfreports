@@ -54,6 +54,9 @@
 (defn first-measurement-best []
   (-> (tryme) (cnt 8) (cnt 7) (cnt 0)))
 
+(defn first-measurement-reduced []
+  (reduce (fn [o x] (cnt o x) ) (tryme) [8 7 0]))
+
 (defn groups []
   (.get (.content (use-tags 8)) 9))
 
